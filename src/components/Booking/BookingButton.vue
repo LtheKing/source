@@ -5,8 +5,12 @@
                 {{ text }}
             </button>
 
-            <b-button class="button btn-Delete" type="is-danger" @click="$emit('delete-theater')">
-                Delete
+            <b-button class="button btn-Delete" type="is-danger" @click="$emit('cancel-booking')">
+                Cancel
+            </b-button>
+
+            <b-button class="button btn-Approve" type="is-success" @click="$emit('approve-booking')">
+                Approve
             </b-button>
 
         </b-field>    
@@ -15,7 +19,7 @@
 
 <script>
     export default {
-        name: 'TheaterAddEditButton',
+        name: 'BookingButton',
         props: {
             color: String,
             text: String

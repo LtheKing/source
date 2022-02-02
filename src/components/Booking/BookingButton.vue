@@ -9,9 +9,9 @@
                 Cancel
             </b-button>
 
-            <b-button class="button btn-Approve" type="is-success" @click="$emit('approve-booking')">
-                Approve
-            </b-button>
+            <button class="button btn-Approve" :style="{background: colorApprove}" @click="$emit('approve-booking')">
+                {{textApprove}}
+            </button>
 
         </b-field>    
     </section>    
@@ -22,7 +22,9 @@
         name: 'BookingButton',
         props: {
             color: String,
-            text: String
+            colorApprove: String,
+            text: String,
+            textApprove: String
         }
     }
 </script>
@@ -31,5 +33,9 @@
     .btn-Edit{
         margin-left: 0.5cm;
         margin-right: 0.5cm;
+    }
+
+    .btn-Approve {
+        margin-left: 0.5cm;
     }
 </style>

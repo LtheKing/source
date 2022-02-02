@@ -1,34 +1,33 @@
 <template>
-    <div class="container">
-        <MovieIndex />
-    </div>
+  <div class="container">
+    <MovieIndex ref="movieIndex"/>
+
+    <div class="pagenumbers" id="pagination"></div>
+  </div>
 </template>
 
 <script>
-import MovieIndex from './MovieIndex.vue'
+const pagination_element = document.getElementById("pagination");
 
+import MovieIndex from "./MovieIndex.vue";
 export default {
-    name: 'MovieHome',
-    components: {
-        MovieIndex
-    },
-    props: {
-        title: String,
-    },    
-    data() {
-        return{
-            showEditForm: false,
-        }
-    },
-    methods: {
-        addOrEditMovie(obj) {
-            console.log(obj)
-        }
-    }
-}
-
+  name: "MovieHome",
+  components: {
+    MovieIndex,
+  },
+  props: {
+    title: String,
+  },
+  data() {
+    return {
+      showEditForm: false,
+    };
+  },
+  methods: {
+    
+  },
+};
 </script>
 
 <style scoped>
-   
 </style>

@@ -39,7 +39,7 @@ export default {
         case 'movie':
             this.movieHomeShow = true
             this.theaterHomeshow = false
-            this.bookingHomeshow = false
+            this.bookingHomeShow = false
           break
         
         case 'theater':
@@ -55,7 +55,9 @@ export default {
           break 
 
         default:
-            
+            this.bookingHomeShow = false
+            this.theaterHomeshow = false
+            this.movieHomeShow = false
           break
       }
     }
